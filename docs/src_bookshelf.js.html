@@ -359,9 +359,9 @@ function Bookshelf(knex) {
     let builder = null;
 
     if (isString(tableNameOrBuilder)) {
-      builder = knex(tableNameOrBuilder);
+      builder = bookshelf.knex(tableNameOrBuilder);
     } else if (tableNameOrBuilder == null) {
-      builder = knex.queryBuilder();
+      builder = bookshelf.knex.queryBuilder();
     } else {
       // Assuming here that `tableNameOrBuilder` is a QueryBuilder instance. Not
       // aware of a way to check that this is the case (ie. using
@@ -411,7 +411,7 @@ export default Bookshelf;
           <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
           
             on
-          June 29th 2016
+          June 7th 2017
         </div>
         <div>
           <a href="https://github.com/aral/fork-me-on-github-retina-ribbons">
